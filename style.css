@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.no-desktop {
+    display: none;
+}
   
 body {
     background-image: url("./assets/fogo.png");
@@ -30,13 +34,12 @@ header div {
     display: flex;
     color: white;
     align-items: center;
-    justify-content: space-between;
-    width: 270px;
 }
 
 .icon {
     width: 50px;
     height: 84px;
+    margin-right: 2vw;
 }
   
 h2 {
@@ -85,17 +88,18 @@ main {
     align-items: center;
 }
   
-figure {
+main figure {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     height: 46vh;
+    position: relative;
+    top: 2vh;
 }
   
 .logo {
     width: 420px;
-    height: 200px;
 }
   
 .botao {
@@ -103,3 +107,21 @@ figure {
     height: 57px;
 }
   
+@media (max-width:750px) {
+    .no-mobile {
+        display: none;
+    }
+
+    .no-desktop {
+        display: flex;
+    }
+
+    .logo {
+        width: 80vw;
+    }
+      
+    .botao {
+        width: 238px;
+        height: 57px;
+    }
+}
